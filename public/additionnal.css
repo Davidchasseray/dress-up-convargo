@@ -1,0 +1,23 @@
+/*Filter styles*/
+.invert { filter: invert(100%); }
+.container-for-truck{
+    background-color: orangered;
+    border-radius: 20px;
+}
+.container-for-client{
+    background-color:#ECC12C;
+    border-radius: 20px;
+}
+.colortheback{background-color: black;}
+.color-on-black{color: rgb(255, 255, 255);}
+.input-data{border-radius: 20px;}
+.actors{
+    background-color: rgb(88, 252, 88);
+    border-radius: 100px;
+}
+.trucker-or-shipper{
+    color:black;
+    font-weight: bold;
+    font-size: 30px;
+}
+

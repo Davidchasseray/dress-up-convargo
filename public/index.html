@@ -2,21 +2,78 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with Convargo</title>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <link rel="stylesheet" href="additionnal.css"/>
   </head>
-  <body>
-    <div id="trucker">
-      <input class="name" type="text" placeholder="Trucker name"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
-      <input class="price-by-cubic" type="number" placeholder="Price by m3"/>
+  <body class="text-center colortheback">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="img/convargo_logo_black.png" width="150" height="30" alt="" class="invert">
+          </a>
+    </nav>
+    
+    <img class="img-fluid" src="img/truck-hd.jpg"/>
+
+
+    <h1 class="display-1 color-on-black">Estimate your sending price</h1>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col container-for-truck col-sm-5">
+            <div id="trucker" class="text-center trucker-or-shipper">Enter the trucker parameters
+              <div class = "row">              
+                <div class = "col">
+                  <input class="name text-center input-data" type="text" placeholder="Trucker name"/>
+                </div>
+              </div>
+              <div class = "row">              
+                  <div class = "col">
+                      <input class="price-by-km text-center input-data" type="number" placeholder="Price by km"/>
+                    </div>
+                </div>
+                <div class = "row">              
+                    <div class = "col">
+                        <input class="price-by-cubic text-center input-data" type="number" placeholder="Price by m3"/>
+                      </div>
+                  </div>
+              </div>          
+            </div>
+          <div class="col col-sm-2"></div>
+          <div class="col container-for-client col-sm-5">
+            <div id="shipper" class="text-center trucker-or-shipper">Enter the shipper parameters
+                <div class = "row">              
+                    <div class = "col">
+                        <input class="name text-center input-data" type="text" placeholder="Shipper name"/>
+                      </div>
+                  </div>
+                  <div class = "row">              
+                      <div class = "col">
+                          <input class="distance text-center input-data" type="number" placeholder="Distance in km"/>
+                        </div>
+                    </div>
+                    <div class = "row">              
+                        <div class = "col">
+                            <input class="volume text-center input-data" type="number" placeholder="Volume in m3"/>
+                          </div>
+                      </div>
+                  </div> 
+            </div>
+        </div>
+      </div>
     </div>
-    <div id="shipper">
-      <input class="name" type="text" placeholder="Shipper name"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="volume" type="number" placeholder="Volume in m3"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
+    
+    
+    <div class="text-center">
+      <input class="option" type="checkbox" placeholder="Deductible option" id="option"/>
+      <label for="option" class="color-on-black">Add Option to make sure the packet travel safe</label>
     </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
+    <div>      
+      <button id="compute" class="btn btn-outline-success my-2 my-sm-0" type="submit">Compute</button>
+    </div>
+    
+    <div id="actors" class="actors"></div>
+    <img class="img-fluid"  src="img/truck2-hd.jpg"/>
+
     <script src="convargo.js"></script>
     <script src="index.js"></script>
   </body>
